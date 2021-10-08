@@ -1,0 +1,21 @@
+(
+  (is:armor -is:exotic -is:classitem)
+
+  -(is:titan ((basestat:recovery:>=13 basestat:intellect:>=20) or basestat:intellect:>=24 or basestat:total:>=63))
+  -(is:hunter ((basestat:recovery:>=13 basestat:mobility:>=20) or basestat:recovery:>=24 or basestat:total:>=63))
+  -(is:warlock ((basestat:discipline:>=13 basestat:recovery:>=20) or basestat:recovery:>=24 or basestat:total:>=63))
+
+  -(basestat:highest:>=20 basestat:secondhighest:>=15)
+  
+  -(basestat:highest:>=15 basestat:secondhighest:>=15 basestat:thirdhighest:>=15)
+)
+or
+  (is:classitem ((is:dupelower -is:modded) or (is:sunset))) 
+or
+  (is:armor is:sunset) 
+or
+  (is:armor is:blue)
+or
+  (is:armor tag:junk or (tag:infuse -is:maxpower))
+
+-tag:keep -tag:archive -is:inloadout power:<=1320
